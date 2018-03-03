@@ -16,5 +16,24 @@ namespace Winstatus
         {
             InitializeComponent();
         }
+
+        private void Status_Click(object sender, EventArgs e)
+        {
+           // if (sender.Equals(this.newToolStripMenuItem))
+           if(this.newToolStripMenuItem.Equals(sender))
+            {
+                this.StatusLabel1.Text = "file";
+            }else if (sender.Equals(this.openToolStripMenuItem))
+            {
+                this.StatusLabel1.Text = "open";
+            }else if (sender.Equals(this.saveToolStripMenuItem))
+            {
+                this.StatusLabel1.Text = "save";
+            }
+            else
+            {
+                this.StatusLabel1.Text = "exit";
+            }
+        }
     }
 }
